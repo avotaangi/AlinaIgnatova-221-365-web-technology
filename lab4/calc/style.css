@@ -3,88 +3,84 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #333; /* Dark background, as shown in the image */
-    color: white; /* Light text for visibility against the dark buttons */
+    background-color: #333;
+    color: white; 
     font-family: 'Prompt', sans-serif;
 }
 
 .calculate {
-    background: #222; /* Darker background for the calculator itself */
-    border-radius: 20px; /* Rounded corners as seen in the image */
+    background: #222; 
+    border-radius: 20px; 
     padding: 20px;
-    width: 300px; /* Or your preferred width */
+    width: 300px;
 }
 
 .screen {
-    background: #111; /* Even darker background for the screen */
+    background: #111; 
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     text-align: right;
     font-size: 2em;
-    min-height: 60px; /* Giving the screen a fixed height */
+    min-height: 60px; 
 }
 
 .buttons .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px; /* Space between rows */
+    margin-bottom: 10px; 
 }
 
 .key {
-    background: #555; /* Standard button color */
+    background: #555; 
     border: none;
-    border-radius: 50%; /* Circular buttons */
-    color: white; /* Button text color */
+    border-radius: 50%; 
+    color: white; 
     font-size: 1.5em;
     cursor: pointer;
-    width: 60px; /* Width of the buttons */
-    height: 60px; /* Height of the buttons */
+    width: 60px; 
+    height: 60px; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
 }
 
-/* Styling for the zero button which is wider */
+
 .key.zero {
-    border-radius: 30px; /* Rounded rectangle shape for the 0 key */
-    flex-grow: 1; /* Allows the zero button to grow */
+    border-radius: 30px; 
+    flex-grow: 1; 
 }
 
 .key.operation {
-    background: #ff9500; /* Orange color for operation buttons */
+    background: #ff9500; 
 }
 
 .key.function {
-    background: #a6a6a6; /* Light grey for function buttons */
+    background: #a6a6a6; 
 }
 
 .key.result {
-    background: #ff9500; /* Orange color for the equals button */
-    border-radius: 30px; /* Rounded rectangle shape for the equals key */
-    flex-grow: 1; /* Allows the equals button to grow */
+    background: #ff9500; 
+    border-radius: 30px; 
+    flex-grow: 1; 
 }
 
-/* Additional hover styles for interactivity */
 .key:hover {
-    filter: brightness(1.2); /* Make the button slightly lighter when hovered */
+    filter: brightness(1.2); 
 }
 
-/* Ensuring the last row's buttons align correctly */
 .buttons .row:last-child {
     justify-content: flex-start;
 }
 
-/* Adjusts size for operation buttons to match the provided layout */
 .buttons .row .key.operation,
 .buttons .row .key.function,
 .buttons .row .key.result {
-    flex-basis: 60px; /* Ensures buttons have a width of 60px */
-    flex-grow: 0; /* Prevents operations from growing */
+    flex-basis: 60px; 
+    flex-grow: 0;
 }
 
-/* Specific adjustments for the last row to handle the zero and equals button */
 .buttons .row:last-child .key {
     border-radius: 50%;
     width: auto;
@@ -93,15 +89,13 @@ body {
 
 .buttons .row:last-child .key.zero,
 .buttons .row:last-child .key.result {
-    flex: 0 1 130px; /* Allows these buttons to expand */
+    flex: 0 1 130px; 
 }
 
-/* Reset the margin for the last key in each row to ensure proper alignment */
 .buttons .row .key:last-child {
     margin-right: 0;
 }
 
-/* Ensuring text is centered for all keys */
 .key > span {
     text-align: center;
 }
